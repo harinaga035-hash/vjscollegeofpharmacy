@@ -1,5 +1,4 @@
 import { jsx, jsxs } from "react/jsx-runtime";
-import { createFileRoute } from "@tanstack/react-router";
 import * as React from "react";
 import {
   Phone,
@@ -47,9 +46,6 @@ import life1 from "@/assets/life-1.jpg";
 import life2 from "@/assets/life-2.jpg";
 import life3 from "@/assets/life-3.jpg";
 import life4 from "@/assets/life-4.jpg";
-const Route = createFileRoute("/")({
-  component: Index
-});
 function useCounter(target, durationMs = 1600, start = false) {
   const [val, setVal] = React.useState(0);
   React.useEffect(() => {
@@ -801,5 +797,5 @@ function Index() {
   ] });
 }
 export {
-  Route
+  Index as default
 };
